@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <style>
+      table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+      }
+
+      td,
+      th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+      }
+
+      .p-4 {
+        padding: 1.5rem !important;
+      }
+
+      .mb-4 {
+        margin-bottom: 1.5rem !important;
+      }
+
+      .border {
+        border: 1px solid #e0e0e0 !important;
+      }
+
+      .ripple-surface {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    vertical-align: bottom;
+}
+
+.delete-button, .edit-button {
+    padding: 0;
+    margin: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+    </style>
+  </head>
+
+  <body>
+    <section class="border p-4 mb-4">
+      <h2>HTML Table</h2>
+      <input
+      data-mdb-search=""
+      data-mdb-target="#table_modal"
+      type="text"
+      id="search_modal"
+      class="form-control"
+    />
+    <label class="form-label" for="search_modal" style="margin-left: 0px">Search</label>
+    <button class="btn btn-primary btn-sm ms-3 ripple-surface" data-mdb-add-entry="" data-mdb-target="#table_inputs">
+      <i class="fa fa-plus"></i>
+    </button>
+      <hr />
+      <table>
+        <thead>
+          <tr>
+            <th>Product</th>
+            <th>Description</th>
+            <th>Option</th>
+            <th>Sub-item</th>
+            <th>Quantity</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+       <tbody>
+        <tr>
+          <td>DL380</td>
+          <td>DL380</td>
+          <td>BTO</td>
+          <td>TRUE</td>
+          <td>10</td>
+          <td><button class="me-2 btn btn-lg text-dark edit-button ripple-surface"><i class="far fa-edit"></i></button><button class="btn btn-lg text-dark delete-button "><i class="far fa-trash-alt"></i></button></td>
+        </tr>
+        <tr>
+          <td>DL380</td>
+          <td>DL380</td>
+          <td>BTO</td>
+          <td>TRUE</td>
+          <td>10</td>
+          <td><button class="me-2 btn btn-lg text-dark edit-button ripple-surface"><i class="far fa-edit"></i></button><button class="btn btn-lg text-dark delete-button "><i class="far fa-trash-alt"></i></button></td>
+        </tr>
+       </tbody>
+      </table>
+    </section>
+  </body>
+</html>

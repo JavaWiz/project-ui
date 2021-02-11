@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.question-circle:after{
+	content: '?';
+	position: relative;
+    display: inline-block;
+    font-family: sans-serif;
+    font-weight: bold;
+    text-align: center;
+    font-size: 0.9em;
+    line-height: 0.8em;
+    border-radius: 50%;
+    margin-left: 6px;
+    padding: 0.13em 0.2em 0.09em 0.2em;
+    color: inherit;
+    border: 2px solid;
+    text-decoration: none;
+}
+
+.tooltiptext {
+	visibility: hidden;
+	width: 320px;
+	background-color: #bce8f1;
+	color: #fff;
+	border-radius: 3px;
+	padding: 5px 5px;
+	position: absolute;
+	z-index: 1;
+	opacity: 0;
+	transition: opacity 0.3s;
+	color: #31708f;
+	font-size: 12px;
+	bottom: 64%;
+    left: 42%;
+}
+
+.tooltiptext:after {
+	content: "";
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	margin-left: -5px;
+	border-width: 5px;
+	border-style: solid;
+	border-color: #bce8f1 transparent transparent transparent;
+}
+    
+.question-circle:hover + .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+
+#customers {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#customers td, #customers th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+
+#customers tr:hover {background-color: #ddd;}
+
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #4CAF50;
+  color: white;
+}
+</style>
+</head>
+<body>
+
+<h2>Display an Element on Hover</h2>
+<table id="customers">
+	<tr>
+		<th>abc</th>
+		<th>bcd
+			<div class="question-circle">
+			</div>
+			<span class="tooltiptext">NDU is "Non-Disruptive Upgrade" which means the Array stays online during the upgrade process.</span>
+		</th>
+	</tr>
+	<tr>
+		<td>123</td>
+		<td>234</td>
+	</tr>
+</table>
+</body>
+</html>

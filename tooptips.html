@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<style>
+.tooltip {
+	position: relative;
+	display: inline-block;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 320px;
+    background-color: #d9edf7;
+    color: #31708f;
+    border-radius: 6px;
+    padding: 5px 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: -40%;
+    left: 370%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 0.3s;
+	font-size: .7em;
+}
+
+.tooltip .tooltiptext::after {
+	content: "";
+	position: absolute;
+	top: 50%;
+	right: 100%;
+	margin-top: -5px;
+	border-width: 5px;
+	border-style: solid;
+	border-color: transparent #d9edf7 transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+#customers {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#customers td, #customers th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+
+#customers tr:hover {background-color: #ddd;}
+
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #4CAF50;
+  color: white;
+}
+
+.question-circle:after{
+	content: '?';
+	position: relative;
+    display: inline-block;
+    font-family: sans-serif;
+    font-weight: bold;
+    text-align: center;
+    font-size: 0.9em;
+    line-height: 0.8em;
+    border-radius: 50%;
+    margin-left: 6px;
+    padding: 0.13em 0.2em 0.09em 0.2em;
+    color: inherit;
+    border: 2px solid;
+    text-decoration: none;
+}
+</style>
+<body style="text-align:center;">
+
+<h2>Tooltip</h2>
+<p>Move the mouse over the text below:</p>
+<table id="customers">
+	<tr>
+		<th>abc</th>
+		<th>bcd
+			<div class="tooltip"><div class="question-circle"></div>
+			  <span class="tooltiptext">NDU is "Non-Disruptive Upgrade" which means the Array stays online during the upgrade process</span>
+			</div>
+		</th>
+	</tr>
+	<tr>
+		<td>123</td>
+		<td>234</td>
+	</tr>
+</table>
+</body>
+</html>
